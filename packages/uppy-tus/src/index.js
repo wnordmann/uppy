@@ -1,12 +1,12 @@
-const Plugin = require('../core/Plugin')
+const Plugin = require('@uppy/core/lib/Plugin')
 const tus = require('tus-js-client')
-const UppySocket = require('../core/UppySocket')
+const UppySocket = require('@uppy/core/lib/UppySocket')
 const {
   emitSocketProgress,
   getSocketHost,
   settle,
   limitPromises
-} = require('../core/Utils')
+} = require('@uppy/util')
 require('whatwg-fetch')
 
 // Extracted from https://github.com/tus/tus-js-client/blob/master/lib/upload.js#L13

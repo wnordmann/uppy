@@ -1,11 +1,11 @@
-const Utils = require('../core/Utils')
-const Translator = require('../core/Translator')
+const Utils = require('@uppy/util')
+const Translator = require('./Translator')
 const ee = require('namespace-emitter')
 const cuid = require('cuid')
 const throttle = require('lodash.throttle')
 const prettyBytes = require('prettier-bytes')
 const match = require('mime-match')
-const DefaultStore = require('../store/DefaultStore')
+const DefaultStore = require('@uppy/store-default')
 
 /**
  * Uppy Core module.

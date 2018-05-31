@@ -1,10 +1,10 @@
-const Uppy = require('../../src/core')
-const Dashboard = require('../../src/plugins/Dashboard')
-const Instagram = require('../../src/plugins/Instagram')
-const GoogleDrive = require('../../src/plugins/GoogleDrive')
-const Webcam = require('../../src/plugins/Webcam')
-const Tus = require('../../src/plugins/Tus')
-const Form = require('../../src/plugins/Form')
+const Uppy = require('@uppy/core')
+const Dashboard = require('@uppy/dashboard')
+// const Instagram = require('../../src/plugins/Instagram')
+// const GoogleDrive = require('../../src/plugins/GoogleDrive')
+// const Webcam = require('../../src/plugins/Webcam')
+const Tus = require('@uppy/tus')
+// const Form = require('../../src/plugins/Form')
 
 const TUS_ENDPOINT = 'https://master.tus.io/files/'
 
@@ -28,11 +28,11 @@ const uppy = Uppy({
     proudlyDisplayPoweredByUppy: true,
     note: '2 files, images and video only'
   })
-  .use(GoogleDrive, { target: Dashboard, host: 'http://localhost:3020' })
-  .use(Instagram, { target: Dashboard, host: 'http://localhost:3020' })
-  .use(Webcam, { target: Dashboard })
+  // .use(GoogleDrive, { target: Dashboard, host: 'http://localhost:3020' })
+  // .use(Instagram, { target: Dashboard, host: 'http://localhost:3020' })
+  // .use(Webcam, { target: Dashboard })
   .use(Tus, { endpoint: TUS_ENDPOINT })
-  .use(Form, { target: '#upload-form' })
+  // .use(Form, { target: '#upload-form' })
   // .use(GoldenRetriever, {serviceWorker: true})
 
 uppy.on('complete', (result) => {

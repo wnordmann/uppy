@@ -1,0 +1,32 @@
+{
+  "name": "@uppy/statusbar",
+  "version": "0.24.4",
+  "description": "StatusBar UI for Uppy",
+  "main": "lib/index.js",
+  "jsnext:main": "src/index.js",
+  "files": [
+    "src/",
+    "lib/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/transloadit/uppy.git"
+  },
+  "keywords": [
+    "uppy",
+    "uppy-plugin"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/transloadit/uppy/issues"
+  },
+  "homepage": "https://uppy.io",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@uppy/core": "^0.24.4"
+  },
+  "peerDependencies": {
+    "@uppy/core": "^0.24.4"
+  }
+}

@@ -1,4 +1,4 @@
-const Core = require('../../src/core/index.js')
+const Core = require('./')
 const russian = require('../../src/locales/ru_RU')
 const english = require('../../src/locales/en_US')
 

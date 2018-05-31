@@ -1,0 +1,43 @@
+{
+  "name": "@uppy/dashboard",
+  "version": "0.24.4",
+  "description": "Dashboard UI for Uppy",
+  "main": "lib/index.js",
+  "jsnext:main": "src/index.js",
+  "files": [
+    "src/",
+    "lib/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/transloadit/uppy.git"
+  },
+  "keywords": [
+    "uppy",
+    "uppy-plugin",
+    "uploader",
+    "resumable uploads",
+    "dashboard"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/transloadit/uppy/issues"
+  },
+  "homepage": "https://uppy.io",
+  "dependencies": {
+    "@uppy/util": "^0.24.4",
+    "@uppy/informer": "^0.24.4",
+    "@uppy/statusbar": "^0.24.4",
+    "@uppy/thumbnail-generator": "^0.24.4",
+    "classnames": "^2.2.5",
+    "drag-drop": "^4.2.0",
+    "preact": "^8.2.9",
+    "prettier-bytes": "^1.0.4"
+  },
+  "devDependencies": {
+    "@uppy/core": "^0.24.4"
+  },
+  "peerDependencies": {
+    "@uppy/core": "^0.24.4"
+  }
+}

@@ -1,5 +1,5 @@
 const preact = require('preact')
-const { findDOMElement } = require('../core/Utils')
+const { findDOMElement } = require('@uppy/util')
 
 /**
  * Defer a frequent call to the microtask queue.

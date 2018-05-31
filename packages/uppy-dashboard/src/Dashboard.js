@@ -2,7 +2,7 @@ const FileList = require('./FileList')
 const Tabs = require('./Tabs')
 const FileCard = require('./FileCard')
 const classNames = require('classnames')
-const { isTouchDevice } = require('../../core/Utils')
+const { isTouchDevice } = require('@uppy/util')
 const { h } = require('preact')
 
 // http://dev.edenspiekermann.com/2016/02/11/introducing-accessible-modal-dialog

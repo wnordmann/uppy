@@ -1,6 +1,6 @@
 const { getFileNameAndExtension,
          truncateString,
-         copyToClipboard } = require('../../core/Utils')
+         copyToClipboard } = require('@uppy/util')
 const prettyBytes = require('prettier-bytes')
 const FileItemProgress = require('./FileItemProgress')
 const getFileTypeIcon = require('./getFileTypeIcon')

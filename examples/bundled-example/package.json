@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "name": "uppy-example",
+  "dependencies": {
+    "@uppy/core": "file:../../packages/uppy-core",
+    "@uppy/dashboard": "file:../../packages/uppy-dashboard",
+    "@uppy/tus": "file:../../packages/uppy-tus"
+  }
+}

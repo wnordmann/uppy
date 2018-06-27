@@ -21,7 +21,8 @@ module.exports = class RequestClient {
   get defaultHeaders () {
     return {
       'Accept': 'application/json',
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'Auth': 'test'
     }
   }
 
@@ -62,9 +63,11 @@ module.exports = class RequestClient {
   }
 
   post (path, data) {
+    const headers = Object.assign({}, this.defaultHeaders, this.opts.headers)
+    console.log(headers)
     return fetch(this._getUrl(path), {
       method: 'post',
-      headers: this.defaultHeaders,
+      headers: headers,
       body: JSON.stringify(data)
     })
       .then(this.onReceiveResponse)

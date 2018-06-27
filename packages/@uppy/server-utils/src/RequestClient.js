@@ -21,8 +21,7 @@ module.exports = class RequestClient {
   get defaultHeaders () {
     return {
       'Accept': 'application/json',
-      'Content-Type': 'application/json',
-      'Auth': 'test'
+      'Content-Type': 'application/json'
     }
   }
 
@@ -50,9 +49,10 @@ module.exports = class RequestClient {
   }
 
   get (path) {
+    const headers = Object.assign({}, this.defaultHeaders, this.opts.headers)
     return fetch(this._getUrl(path), {
       method: 'get',
-      headers: this.defaultHeaders
+      headers: headers
     })
       // @todo validate response status before calling json
       .then(this.onReceiveResponse)
@@ -64,7 +64,6 @@ module.exports = class RequestClient {
 
   post (path, data) {
     const headers = Object.assign({}, this.defaultHeaders, this.opts.headers)
-    console.log(headers)
     return fetch(this._getUrl(path), {
       method: 'post',
       headers: headers,
@@ -83,13 +82,12 @@ module.exports = class RequestClient {
   }
 
   delete (path, data) {
+    const headers = Object.assign({}, this.defaultHeaders, this.opts.headers)
+
     return fetch(`${this.hostname}/${path}`, {
       method: 'delete',
       credentials: 'include',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
+      headers: headers,
       body: data ? JSON.stringify(data) : null
     })
       .then(this.onReceiveResponse)

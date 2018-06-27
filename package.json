@@ -1,6 +1,6 @@
 {
   "private": true,
-	"name": "@boundlessgeo/uppy",
+	"name": "uppy",
 	"version": "0.0.11",
   "description": "FORK - Extensible JavaScript file upload widget with support for drag&drop, resumable uploads, previews, restrictions, file processing/encoding, remote providers like Instagram, Dropbox, Google Drive, S3 and more :dog:",
   "lint-staged": {
